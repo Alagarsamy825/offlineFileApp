@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EAEEBB32D2F5C3E00DC6F8D /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAEEBB22D2F5C3E00DC6F8D /* FolderViewModel.swift */; };
+		2EAEEBD12D2F650600DC6F8D /* FileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAEEBD02D2F650600DC6F8D /* FileListView.swift */; };
 		2EB04D9A2D2ECD4C00D99082 /* offlineFileAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB04D992D2ECD4C00D99082 /* offlineFileAppApp.swift */; };
 		2EB04D9C2D2ECD4C00D99082 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB04D9B2D2ECD4C00D99082 /* ContentView.swift */; };
 		2EB04D9E2D2ECD4E00D99082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB04D9D2D2ECD4E00D99082 /* Assets.xcassets */; };
 		2EB04DA12D2ECD4E00D99082 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB04DA02D2ECD4E00D99082 /* Preview Assets.xcassets */; };
 		2EB04DA92D2ECD7500D99082 /* coreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EB04DA72D2ECD7500D99082 /* coreData.xcdatamodeld */; };
 		2EB04DAB2D2ECEBA00D99082 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB04DAA2D2ECEBA00D99082 /* PersistenceController.swift */; };
-		2EB04DCD2D2EDD3D00D99082 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB04DCB2D2EDD3D00D99082 /* Folder+CoreDataClass.swift */; };
-		2EB04DCE2D2EDD3D00D99082 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB04DCC2D2EDD3D00D99082 /* Folder+CoreDataProperties.swift */; };
-		2EB04DD02D2EDEA900D99082 /* CreateFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB04DCF2D2EDEA900D99082 /* CreateFolder.swift */; };
+		2EB04DD02D2EDEA900D99082 /* AddFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB04DCF2D2EDEA900D99082 /* AddFolderView.swift */; };
+		2EEE63022D31866F004170B2 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE62FE2D31866F004170B2 /* Folder+CoreDataClass.swift */; };
+		2EEE63032D31866F004170B2 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE62FF2D31866F004170B2 /* Folder+CoreDataProperties.swift */; };
+		2EEE63042D31866F004170B2 /* File+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE63002D31866F004170B2 /* File+CoreDataClass.swift */; };
+		2EEE63052D31866F004170B2 /* File+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE63012D31866F004170B2 /* File+CoreDataProperties.swift */; };
+		2EEE63082D31884A004170B2 /* FolderGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE63072D31884A004170B2 /* FolderGridView.swift */; };
+		2EEE630A2D318A3F004170B2 /* FolderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE63092D318A3F004170B2 /* FolderItemView.swift */; };
+		2EEE630D2D318B99004170B2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE630C2D318B99004170B2 /* Extension.swift */; };
+		2EEE63102D318FD0004170B2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE630F2D318FD0004170B2 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EAEEBB22D2F5C3E00DC6F8D /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
+		2EAEEBD02D2F650600DC6F8D /* FileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListView.swift; sourceTree = "<group>"; };
 		2EB04D962D2ECD4C00D99082 /* offlineFileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = offlineFileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB04D992D2ECD4C00D99082 /* offlineFileAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offlineFileAppApp.swift; sourceTree = "<group>"; };
 		2EB04D9B2D2ECD4C00D99082 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,9 +36,15 @@
 		2EB04DA02D2ECD4E00D99082 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2EB04DA82D2ECD7500D99082 /* coreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreData.xcdatamodel; sourceTree = "<group>"; };
 		2EB04DAA2D2ECEBA00D99082 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
-		2EB04DCB2D2EDD3D00D99082 /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Folder+CoreDataClass.swift"; path = "offlineFileApp/Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2EB04DCC2D2EDD3D00D99082 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Folder+CoreDataProperties.swift"; path = "offlineFileApp/Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2EB04DCF2D2EDEA900D99082 /* CreateFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolder.swift; sourceTree = SOURCE_ROOT; };
+		2EB04DCF2D2EDEA900D99082 /* AddFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddFolderView.swift; path = offlineFileApp/View/AddFolderView.swift; sourceTree = SOURCE_ROOT; };
+		2EEE62FE2D31866F004170B2 /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2EEE62FF2D31866F004170B2 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2EEE63002D31866F004170B2 /* File+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2EEE63012D31866F004170B2 /* File+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2EEE63072D31884A004170B2 /* FolderGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderGridView.swift; sourceTree = "<group>"; };
+		2EEE63092D318A3F004170B2 /* FolderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderItemView.swift; sourceTree = "<group>"; };
+		2EEE630C2D318B99004170B2 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		2EEE630F2D318FD0004170B2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,19 +52,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EEE63102D318FD0004170B2 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EAEEBAF2D2F5B9600DC6F8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2EAEEBB02D2F5B9F00DC6F8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EB04DCF2D2EDEA900D99082 /* AddFolderView.swift */,
+				2EAEEBD02D2F650600DC6F8D /* FileListView.swift */,
+				2EEE63072D31884A004170B2 /* FolderGridView.swift */,
+				2EEE63092D318A3F004170B2 /* FolderItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2EAEEBB12D2F5BA700DC6F8D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2EB04DAA2D2ECEBA00D99082 /* PersistenceController.swift */,
+				2EAEEBB22D2F5C3E00DC6F8D /* FolderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2EB04D8D2D2ECD4C00D99082 = {
 			isa = PBXGroup;
 			children = (
-				2EB04DCB2D2EDD3D00D99082 /* Folder+CoreDataClass.swift */,
-				2EB04DCC2D2EDD3D00D99082 /* Folder+CoreDataProperties.swift */,
+				2EEE63062D318679004170B2 /* CoreDateManager */,
 				2EB04D982D2ECD4C00D99082 /* offlineFileApp */,
 				2EB04D972D2ECD4C00D99082 /* Products */,
+				2EEE630E2D318FD0004170B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,13 +107,15 @@
 		2EB04D982D2ECD4C00D99082 /* offlineFileApp */ = {
 			isa = PBXGroup;
 			children = (
+				2EEE630B2D318B84004170B2 /* Extension */,
+				2EAEEBAF2D2F5B9600DC6F8D /* Model */,
+				2EAEEBB02D2F5B9F00DC6F8D /* View */,
+				2EAEEBB12D2F5BA700DC6F8D /* ViewModel */,
 				2EB04D992D2ECD4C00D99082 /* offlineFileAppApp.swift */,
 				2EB04D9B2D2ECD4C00D99082 /* ContentView.swift */,
 				2EB04DA72D2ECD7500D99082 /* coreData.xcdatamodeld */,
-				2EB04DAA2D2ECEBA00D99082 /* PersistenceController.swift */,
 				2EB04D9D2D2ECD4E00D99082 /* Assets.xcassets */,
 				2EB04D9F2D2ECD4E00D99082 /* Preview Content */,
-				2EB04DCF2D2EDEA900D99082 /* CreateFolder.swift */,
 			);
 			path = offlineFileApp;
 			sourceTree = "<group>";
@@ -80,6 +126,33 @@
 				2EB04DA02D2ECD4E00D99082 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2EEE63062D318679004170B2 /* CoreDateManager */ = {
+			isa = PBXGroup;
+			children = (
+				2EEE62FE2D31866F004170B2 /* Folder+CoreDataClass.swift */,
+				2EEE62FF2D31866F004170B2 /* Folder+CoreDataProperties.swift */,
+				2EEE63002D31866F004170B2 /* File+CoreDataClass.swift */,
+				2EEE63012D31866F004170B2 /* File+CoreDataProperties.swift */,
+			);
+			path = CoreDateManager;
+			sourceTree = "<group>";
+		};
+		2EEE630B2D318B84004170B2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2EEE630C2D318B99004170B2 /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2EEE630E2D318FD0004170B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EEE630F2D318FD0004170B2 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,13 +225,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EEE630D2D318B99004170B2 /* Extension.swift in Sources */,
+				2EAEEBB32D2F5C3E00DC6F8D /* FolderViewModel.swift in Sources */,
 				2EB04D9C2D2ECD4C00D99082 /* ContentView.swift in Sources */,
 				2EB04DA92D2ECD7500D99082 /* coreData.xcdatamodeld in Sources */,
-				2EB04DCD2D2EDD3D00D99082 /* Folder+CoreDataClass.swift in Sources */,
-				2EB04DCE2D2EDD3D00D99082 /* Folder+CoreDataProperties.swift in Sources */,
+				2EEE630A2D318A3F004170B2 /* FolderItemView.swift in Sources */,
 				2EB04D9A2D2ECD4C00D99082 /* offlineFileAppApp.swift in Sources */,
+				2EAEEBD12D2F650600DC6F8D /* FileListView.swift in Sources */,
+				2EEE63082D31884A004170B2 /* FolderGridView.swift in Sources */,
 				2EB04DAB2D2ECEBA00D99082 /* PersistenceController.swift in Sources */,
-				2EB04DD02D2EDEA900D99082 /* CreateFolder.swift in Sources */,
+				2EEE63022D31866F004170B2 /* Folder+CoreDataClass.swift in Sources */,
+				2EEE63032D31866F004170B2 /* Folder+CoreDataProperties.swift in Sources */,
+				2EEE63042D31866F004170B2 /* File+CoreDataClass.swift in Sources */,
+				2EEE63052D31866F004170B2 /* File+CoreDataProperties.swift in Sources */,
+				2EB04DD02D2EDEA900D99082 /* AddFolderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

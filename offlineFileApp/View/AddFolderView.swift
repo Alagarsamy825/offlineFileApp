@@ -9,19 +9,20 @@ import Foundation
 import SwiftUI
 
 struct AddFolderView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @Binding var isPresented: Bool
+    
     @State private var folderName: String = ""
     @State private var selectedColor: Color = .default
-    @Binding var isPresented: Bool
-    @Binding var folders: [(name: String, color: Color, creation: Date)] // Update to store name and color
-
+    @State private var isFavourite: Bool = false
+   
     var body: some View {
         NavigationView {
             Form {
                 TextField("Folder Name", text: $folderName)
-                
-                // Color Picker
                 ColorPicker("Pick a Folder Color", selection: $selectedColor)
                     .padding()
+                Toggle("Mark as Favorite", isOn: $isFavourite)
             }
             .navigationTitle("Add New Folder")
             .toolbar {
@@ -33,8 +34,9 @@ struct AddFolderView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
                         if !folderName.isEmpty {
-                            // Add folder with both name and color
-                            folders.append((name: folderName, color: selectedColor, creation: Date()))
+                            let folderColor = UIColor(selectedColor).toHexString()
+                            FolderViewModel(context: viewContext).createFolder(
+                                name: folderName, color: folderColor, favourite: isFavourite)
                             isPresented = false
                         }
                     }
@@ -45,8 +47,9 @@ struct AddFolderView: View {
     }
 }
 
-struct AddFolderView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddFolderView(isPresented: .constant(true), folders: .constant([]))
-    }
-}
+//struct AddFolderView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddFolderView(isPresented: .constant(true), folders: .constant([]))
+//    }
+//}
+
