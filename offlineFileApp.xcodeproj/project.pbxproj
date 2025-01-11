@@ -16,6 +16,7 @@
 		2EB04DA92D2ECD7500D99082 /* coreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EB04DA72D2ECD7500D99082 /* coreData.xcdatamodeld */; };
 		2EB04DAB2D2ECEBA00D99082 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB04DAA2D2ECEBA00D99082 /* PersistenceController.swift */; };
 		2EB04DD02D2EDEA900D99082 /* AddFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB04DCF2D2EDEA900D99082 /* AddFolderView.swift */; };
+		2EE97BDD2D32489A0048BADF /* FolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE97BDC2D32489A0048BADF /* FolderCollectionViewCell.swift */; };
 		2EEE63022D31866F004170B2 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE62FE2D31866F004170B2 /* Folder+CoreDataClass.swift */; };
 		2EEE63032D31866F004170B2 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE62FF2D31866F004170B2 /* Folder+CoreDataProperties.swift */; };
 		2EEE63042D31866F004170B2 /* File+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE63002D31866F004170B2 /* File+CoreDataClass.swift */; };
@@ -37,6 +38,7 @@
 		2EB04DA82D2ECD7500D99082 /* coreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreData.xcdatamodel; sourceTree = "<group>"; };
 		2EB04DAA2D2ECEBA00D99082 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		2EB04DCF2D2EDEA900D99082 /* AddFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddFolderView.swift; path = offlineFileApp/View/AddFolderView.swift; sourceTree = SOURCE_ROOT; };
+		2EE97BDC2D32489A0048BADF /* FolderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCollectionViewCell.swift; sourceTree = "<group>"; };
 		2EEE62FE2D31866F004170B2 /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2EEE62FF2D31866F004170B2 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2EEE63002D31866F004170B2 /* File+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				2EAEEBD02D2F650600DC6F8D /* FileListView.swift */,
 				2EEE63072D31884A004170B2 /* FolderGridView.swift */,
 				2EEE63092D318A3F004170B2 /* FolderItemView.swift */,
+				2EE97BDC2D32489A0048BADF /* FolderCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				2EEE63032D31866F004170B2 /* Folder+CoreDataProperties.swift in Sources */,
 				2EEE63042D31866F004170B2 /* File+CoreDataClass.swift in Sources */,
 				2EEE63052D31866F004170B2 /* File+CoreDataProperties.swift in Sources */,
+				2EE97BDD2D32489A0048BADF /* FolderCollectionViewCell.swift in Sources */,
 				2EB04DD02D2EDEA900D99082 /* AddFolderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +382,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,6 +410,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

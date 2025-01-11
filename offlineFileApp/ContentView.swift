@@ -18,19 +18,16 @@ struct ContentView: View {
     
     var body: some View {
         
-            VStack {
-                FolderGridView(viewModel: FolderViewModel(context: viewContext))
-            }
-        
-    }
-    
-    
-    struct ContentView_Preview: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-                .previewInterfaceOrientation(.portrait)
-            ContentView()
-                .previewInterfaceOrientation(.landscapeLeft)
+        VStack {
+            FolderGridView(viewModel: FolderViewModel(context: viewContext))
         }
+    }
+}
+struct ContentView_Preview: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .previewInterfaceOrientation(.portrait)
+        ContentView()
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

@@ -11,10 +11,11 @@ import SwiftUI
 struct FolderGridView: View {
     @Environment(\.managedObjectContext) private var context
     @FetchRequest(entity: Folder.entity(),
-                  sortDescriptors: [],
+                  sortDescriptors: [/*NSSortDescriptor(key: "name", ascending: true)*/],
                   animation: .default) private var folders: FetchedResults<Folder>
     
     @State private var showAddFolder = false
+    @State private var selectedSortOption: SortOption = .name
     @ObservedObject var viewModel: FolderViewModel
     
     var body: some View {
@@ -27,25 +28,33 @@ struct FolderGridView: View {
                         .padding()
                 }
                 else {
-                    GeometryReader { geometry in
-                        let columnsCount = geometry.size.width > 600 ? 4 : 3
-                        let gridItems = Array(repeating: GridItem(.flexible(), spacing: 16), count: columnsCount)
-                        
-                        ScrollView {
-                            LazyVGrid(columns: gridItems, spacing: 16) {
-                                ForEach(folders, id: \.self) { folder in
-
-                                        FolderItemView(folder: folder, viewModel: FolderViewModel(context: context))
-
-                                }
-                            }
-                            .padding()
+                    
+                    FolderItemView(context: context) { folder in
+                        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                           let rootVC = windowScene.windows.first?.rootViewController {
+                            //                            rootVC.present(FileListView(folder: folder), animated: true, completion: nil)
                         }
+                        
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
             .navigationTitle("Folders")
             .toolbar {
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Menu {
+                        Button("Sort by Name") {
+                            selectedSortOption = .name
+                        }
+                        
+                        Button("Sort by Date") {
+                            selectedSortOption = .date
+                        }
+                    } label: {
+                        Image(systemName: "arrow.up.arrow.down")
+                    }
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         showAddFolder = true
