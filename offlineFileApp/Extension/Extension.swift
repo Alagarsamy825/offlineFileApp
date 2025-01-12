@@ -57,4 +57,11 @@ enum SortOption {
     case date
 }
 
+enum PickerType: Identifiable {
+    case cameraRoll, files
+    
+    var id: Int {
+        hashValue
+    }
+}
 

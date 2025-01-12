@@ -32,7 +32,12 @@ struct FolderGridView: View {
                     FolderItemView(context: context) { folder in
                         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                            let rootVC = windowScene.windows.first?.rootViewController {
-                            //                            rootVC.present(FileListView(folder: folder), animated: true, completion: nil)
+                            let fileListView = NavigationView {
+                                FileListView(folder: folder, viewModel: FolderViewModel(context: context))
+                            }
+                            let hostingController = UIHostingController(rootView: fileListView)
+                            hostingController.modalPresentationStyle = .overFullScreen
+                            rootVC.present(hostingController, animated: true, completion: nil)
                         }
                         
                     }

@@ -25,6 +25,8 @@
 		2EEE630A2D318A3F004170B2 /* FolderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE63092D318A3F004170B2 /* FolderItemView.swift */; };
 		2EEE630D2D318B99004170B2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE630C2D318B99004170B2 /* Extension.swift */; };
 		2EEE63102D318FD0004170B2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEE630F2D318FD0004170B2 /* CoreData.framework */; };
+		2EF12FFD2D33B23D0051CAF7 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF12FFC2D33B23D0051CAF7 /* ImagePickerView.swift */; };
+		2EF12FFF2D33B92C0051CAF7 /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF12FFE2D33B92C0051CAF7 /* DocumentPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		2EEE63092D318A3F004170B2 /* FolderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderItemView.swift; sourceTree = "<group>"; };
 		2EEE630C2D318B99004170B2 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		2EEE630F2D318FD0004170B2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2EF12FFC2D33B23D0051CAF7 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		2EF12FFE2D33B92C0051CAF7 /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				2EEE63072D31884A004170B2 /* FolderGridView.swift */,
 				2EEE63092D318A3F004170B2 /* FolderItemView.swift */,
 				2EE97BDC2D32489A0048BADF /* FolderCollectionViewCell.swift */,
+				2EF12FFC2D33B23D0051CAF7 /* ImagePickerView.swift */,
+				2EF12FFE2D33B92C0051CAF7 /* DocumentPickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EEE630D2D318B99004170B2 /* Extension.swift in Sources */,
+				2EF12FFF2D33B92C0051CAF7 /* DocumentPickerView.swift in Sources */,
 				2EAEEBB32D2F5C3E00DC6F8D /* FolderViewModel.swift in Sources */,
 				2EB04D9C2D2ECD4C00D99082 /* ContentView.swift in Sources */,
 				2EB04DA92D2ECD7500D99082 /* coreData.xcdatamodeld in Sources */,
@@ -240,6 +247,7 @@
 				2EEE63022D31866F004170B2 /* Folder+CoreDataClass.swift in Sources */,
 				2EEE63032D31866F004170B2 /* Folder+CoreDataProperties.swift in Sources */,
 				2EEE63042D31866F004170B2 /* File+CoreDataClass.swift in Sources */,
+				2EF12FFD2D33B23D0051CAF7 /* ImagePickerView.swift in Sources */,
 				2EEE63052D31866F004170B2 /* File+CoreDataProperties.swift in Sources */,
 				2EE97BDD2D32489A0048BADF /* FolderCollectionViewCell.swift in Sources */,
 				2EB04DD02D2EDEA900D99082 /* AddFolderView.swift in Sources */,
