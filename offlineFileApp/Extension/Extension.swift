@@ -64,4 +64,6 @@ enum PickerType: Identifiable {
         hashValue
     }
 }
-
+enum ImageSaveError: Error {
+    case conversionFailed
+}

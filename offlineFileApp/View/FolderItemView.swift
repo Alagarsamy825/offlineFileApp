@@ -73,7 +73,7 @@ struct FolderItemView: UIViewControllerRepresentable {
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             guard indexPath.item < folders.count else { return }
             let folder = folders[indexPath.item]
-            print(folder)
+            print("File contains: \(folder.files?.allObjects)")
             onSelectFolder(folder)
         }
     }

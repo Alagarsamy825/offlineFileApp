@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
     <entity name="File" representedClassName="File" syncable="YES">
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="data" optional="YES" attributeType="Transformable"/>
+        <attribute name="data" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Folder" inverseName="files" inverseEntity="Folder"/>
     </entity>

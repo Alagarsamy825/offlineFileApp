@@ -28,6 +28,19 @@ class FolderViewModel: ObservableObject {
 
         saveContext()
     }
+    
+    func addFileToFolder(named folderName: String, fileName: String, fileData: Data) {
+        
+        let folder = fetchFolder(named: folderName)
+        
+        if let folder = folder {
+            print("File Data \(fileData)")
+            print("File Name\(fileName)" )
+            addFile(to: folder, name: fileName, data: fileData)
+        } else {
+            print("Folder not found!")
+        }
+    }
 
     func addFile(to folder: Folder, name: String,data: Data) {
         let file = File(context: context)
@@ -59,6 +72,19 @@ class FolderViewModel: ObservableObject {
         } catch {
             print("Failed to fetch folders: \(error.localizedDescription)")
             return []
+        }
+    }
+    
+    func fetchFolder(named folderName: String) -> Folder? {
+        let fetchRequest: NSFetchRequest<Folder> = Folder.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "name == %@", folderName)
+        
+        do {
+            let folders = try context.fetch(fetchRequest)
+            return folders.first
+        } catch {
+            print("Failed to fetch folder by name: \(error.localizedDescription)")
+            return nil
         }
     }
     

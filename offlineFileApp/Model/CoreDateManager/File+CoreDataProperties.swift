@@ -2,7 +2,7 @@
 //  File+CoreDataProperties.swift
 //  offlineFileApp
 //
-//  Created by Elavazhagan on 10/01/25.
+//  Created by Elavazhagan on 14/01/25.
 //
 //
 
@@ -17,8 +17,8 @@ extension File {
     }
 
     @NSManaged public var creationDate: Date?
-    @NSManaged public var name: String?
     @NSManaged public var data: Data?
+    @NSManaged public var name: String?
     @NSManaged public var folder: Folder?
 
 }

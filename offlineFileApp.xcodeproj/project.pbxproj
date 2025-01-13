@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E5E602F2D3598D5006F1100 /* File+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5E602D2D3598D5006F1100 /* File+CoreDataClass.swift */; };
+		2E5E60302D3598D5006F1100 /* File+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5E602E2D3598D5006F1100 /* File+CoreDataProperties.swift */; };
 		2EAEEBB32D2F5C3E00DC6F8D /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAEEBB22D2F5C3E00DC6F8D /* FolderViewModel.swift */; };
 		2EAEEBD12D2F650600DC6F8D /* FileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAEEBD02D2F650600DC6F8D /* FileListView.swift */; };
 		2EB04D9A2D2ECD4C00D99082 /* offlineFileAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB04D992D2ECD4C00D99082 /* offlineFileAppApp.swift */; };
@@ -19,8 +21,6 @@
 		2EE97BDD2D32489A0048BADF /* FolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE97BDC2D32489A0048BADF /* FolderCollectionViewCell.swift */; };
 		2EEE63022D31866F004170B2 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE62FE2D31866F004170B2 /* Folder+CoreDataClass.swift */; };
 		2EEE63032D31866F004170B2 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE62FF2D31866F004170B2 /* Folder+CoreDataProperties.swift */; };
-		2EEE63042D31866F004170B2 /* File+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE63002D31866F004170B2 /* File+CoreDataClass.swift */; };
-		2EEE63052D31866F004170B2 /* File+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE63012D31866F004170B2 /* File+CoreDataProperties.swift */; };
 		2EEE63082D31884A004170B2 /* FolderGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE63072D31884A004170B2 /* FolderGridView.swift */; };
 		2EEE630A2D318A3F004170B2 /* FolderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE63092D318A3F004170B2 /* FolderItemView.swift */; };
 		2EEE630D2D318B99004170B2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE630C2D318B99004170B2 /* Extension.swift */; };
@@ -30,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E5E602D2D3598D5006F1100 /* File+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2E5E602E2D3598D5006F1100 /* File+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2EAEEBB22D2F5C3E00DC6F8D /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
 		2EAEEBD02D2F650600DC6F8D /* FileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListView.swift; sourceTree = "<group>"; };
 		2EB04D962D2ECD4C00D99082 /* offlineFileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = offlineFileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,8 +45,6 @@
 		2EE97BDC2D32489A0048BADF /* FolderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCollectionViewCell.swift; sourceTree = "<group>"; };
 		2EEE62FE2D31866F004170B2 /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2EEE62FF2D31866F004170B2 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2EEE63002D31866F004170B2 /* File+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2EEE63012D31866F004170B2 /* File+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2EEE63072D31884A004170B2 /* FolderGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderGridView.swift; sourceTree = "<group>"; };
 		2EEE63092D318A3F004170B2 /* FolderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderItemView.swift; sourceTree = "<group>"; };
 		2EEE630C2D318B99004170B2 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -68,6 +68,7 @@
 		2EAEEBAF2D2F5B9600DC6F8D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2EEE63062D318679004170B2 /* CoreDateManager */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,7 +99,6 @@
 		2EB04D8D2D2ECD4C00D99082 = {
 			isa = PBXGroup;
 			children = (
-				2EEE63062D318679004170B2 /* CoreDateManager */,
 				2EB04D982D2ECD4C00D99082 /* offlineFileApp */,
 				2EB04D972D2ECD4C00D99082 /* Products */,
 				2EEE630E2D318FD0004170B2 /* Frameworks */,
@@ -140,10 +140,10 @@
 		2EEE63062D318679004170B2 /* CoreDateManager */ = {
 			isa = PBXGroup;
 			children = (
+				2E5E602D2D3598D5006F1100 /* File+CoreDataClass.swift */,
+				2E5E602E2D3598D5006F1100 /* File+CoreDataProperties.swift */,
 				2EEE62FE2D31866F004170B2 /* Folder+CoreDataClass.swift */,
 				2EEE62FF2D31866F004170B2 /* Folder+CoreDataProperties.swift */,
-				2EEE63002D31866F004170B2 /* File+CoreDataClass.swift */,
-				2EEE63012D31866F004170B2 /* File+CoreDataProperties.swift */,
 			);
 			path = CoreDateManager;
 			sourceTree = "<group>";
@@ -244,11 +244,11 @@
 				2EAEEBD12D2F650600DC6F8D /* FileListView.swift in Sources */,
 				2EEE63082D31884A004170B2 /* FolderGridView.swift in Sources */,
 				2EB04DAB2D2ECEBA00D99082 /* PersistenceController.swift in Sources */,
+				2E5E602F2D3598D5006F1100 /* File+CoreDataClass.swift in Sources */,
+				2E5E60302D3598D5006F1100 /* File+CoreDataProperties.swift in Sources */,
 				2EEE63022D31866F004170B2 /* Folder+CoreDataClass.swift in Sources */,
 				2EEE63032D31866F004170B2 /* Folder+CoreDataProperties.swift in Sources */,
-				2EEE63042D31866F004170B2 /* File+CoreDataClass.swift in Sources */,
 				2EF12FFD2D33B23D0051CAF7 /* ImagePickerView.swift in Sources */,
-				2EEE63052D31866F004170B2 /* File+CoreDataProperties.swift in Sources */,
 				2EE97BDD2D32489A0048BADF /* FolderCollectionViewCell.swift in Sources */,
 				2EB04DD02D2EDEA900D99082 /* AddFolderView.swift in Sources */,
 			);
@@ -390,7 +390,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,7 +418,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
