@@ -137,17 +137,17 @@ struct FileListView: View {
             }
         }
         .onChange(of: selectedDocument) { newDocument in
-                   if let documentData = newDocument {
-                       print("Selected Document: \(selectedDocumentText ?? "Unknown")")
-                       
-                       let folderName = folder.name ?? "DefaultFolder"
-                       let fileName = selectedDocumentText ?? "document.pdf"
-                       
-                       // Save the document to the folder
-                       viewModel.addFileToFolder(named: folderName, fileName: fileName, fileData: documentData)
-                       print("Document data successfully saved.")
-                   }
-               }
+            if let documentData = newDocument {
+                print("Selected Document: \(selectedDocumentText ?? "Unknown")")
+                
+                let folderName = folder.name ?? "DefaultFolder"
+                let fileName = selectedDocumentText ?? "document.pdf"
+                
+                // Save the document to the folder
+                viewModel.addFileToFolder(named: folderName, fileName: fileName, fileData: documentData)
+                print("Document data successfully saved.")
+            }
+        }
         
     }
     

@@ -29,7 +29,7 @@ struct FolderGridView: View {
                 }
                 else {
                     
-                    FolderItemView(context: context) { folder in
+                    FolderItemView(context: context, sortBy: selectedSortOption == .name ? "name" : "creation", ascending: true) { folder in
                         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                            let rootVC = windowScene.windows.first?.rootViewController {
                             let fileListView = NavigationView {
@@ -57,7 +57,7 @@ struct FolderGridView: View {
                             selectedSortOption = .date
                         }
                     } label: {
-                        Image(systemName: "arrow.up.arrow.down")
+                        Image(systemName: "ellipsis.circle")
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -68,6 +68,7 @@ struct FolderGridView: View {
                     }
                 }
             }
+            
             .sheet(isPresented: $showAddFolder) {
                 AddFolderView(isPresented: $showAddFolder)
             }

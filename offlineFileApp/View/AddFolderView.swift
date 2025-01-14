@@ -15,7 +15,7 @@ struct AddFolderView: View {
     @State private var folderName: String = ""
     @State private var selectedColor: Color = .default
     @State private var isFavourite: Bool = false
-   
+    
     var body: some View {
         NavigationView {
             Form {
@@ -46,10 +46,4 @@ struct AddFolderView: View {
         }
     }
 }
-
-//struct AddFolderView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddFolderView(isPresented: .constant(true), folders: .constant([]))
-//    }
-//}
 

@@ -11,9 +11,7 @@ import UIKit
 
 struct DocumentPickerView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIDocumentPickerViewController, context: Context){
-        
     }
-    
     
     func makeUIViewController(context: Context) -> UIDocumentPickerViewController {
         let picker = UIDocumentPickerViewController(documentTypes: ["public.item"], in: .open)

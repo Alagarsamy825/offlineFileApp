@@ -9,15 +9,16 @@ import Foundation
 import CoreData
 import SwiftUI
 
-class FolderViewModel: ObservableObject {
+class FolderViewModel: NSObject,ObservableObject {
     let context: NSManagedObjectContext
-
+   
     init(context: NSManagedObjectContext) {
         self.context = context
     }
 
     @Published var folders: [Folder] = []
     
+
     func createFolder(name: String, color: String?, favourite: Bool) {
         let folder = Folder(context: context)
         folder.id = UUID()
@@ -85,24 +86,6 @@ class FolderViewModel: ObservableObject {
         } catch {
             print("Failed to fetch folder by name: \(error.localizedDescription)")
             return nil
-        }
-    }
-    
-    func updateFavouriteStatus(for folderName: String, to favourite: Bool) {
-        let fetchRequest: NSFetchRequest<Folder> = Folder.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "name == %@", folderName)
-        
-        do {
-            let folders = try context.fetch(fetchRequest)
-            if let folder = folders.first {
-                folder.favourite = favourite
-                saveContext()
-                print("Updated favourite status for folder '\(folderName)' to \(favourite)")
-            } else {
-                print("Folder with name '\(folderName)' not found.")
-            }
-        } catch {
-            print("Failed to update favourite status: \(error.localizedDescription)")
         }
     }
 }

@@ -19,6 +19,15 @@ struct FolderItemView: UIViewControllerRepresentable {
     var context: NSManagedObjectContext
     var onSelectFolder: (Folder) -> Void
     
+    
+    init(context: NSManagedObjectContext, sortBy key: String, ascending: Bool, onSelectFolder: @escaping (Folder) -> Void) {
+        self.context = context
+        self.onSelectFolder = onSelectFolder
+        
+        _folders = FetchRequest(entity: Folder.entity(),
+                                sortDescriptors: [NSSortDescriptor(key: key, ascending: ascending)])
+    }
+    
     private let layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 16
@@ -79,47 +88,3 @@ struct FolderItemView: UIViewControllerRepresentable {
     }
     
 }
-
-
-//struct FolderItemView: View {
-//    @Environment(\.managedObjectContext) private var context
-//    @ObservedObject var folder: Folder
-//    @ObservedObject var viewModel: FolderViewModel
-//
-//    var body: some View {
-//        ZStack(alignment: .topTrailing) {
-//            VStack {
-//                Image(systemName: "folder.fill")
-//                    .resizable()
-//                    .frame(width: 50, height: 50)
-//                    .foregroundColor(Color(hex: folder.color!))
-//                Text(folder.name!)
-//                    .font(.caption)
-//                    .foregroundColor(.primary)
-//                let creationDateTime = DateFormatter.dateFormatter.string(from: folder.creation!)
-//                Text(creationDateTime)
-//                    .font(.caption)
-//                    .foregroundColor(.secondary)
-//            }
-//            .padding()
-//            //            .background(RoundedRectangle(cornerRadius: 10).fill(Color(.systemGray6)))
-//
-//
-//            Button(action: toggleFavourite) {
-//                Image(systemName: folder.favourite ? "heart.fill" : "heart")
-//                    .foregroundColor(folder.favourite ? .red : .gray)
-//                    .padding(8)
-//                    .background(Color.white)
-//                    .clipShape(Circle())
-//                    .shadow(radius: 2)
-//
-//            }
-//            .frame(width: 8, height: 8)
-//            .opacity(0.8)
-//            .offset(x: -15, y: 15)
-//        }
-//    }
-//    private func toggleFavourite() {
-//        viewModel.updateFavouriteStatus(for: folder.name!, to: !folder.favourite)
-//    }
-//}

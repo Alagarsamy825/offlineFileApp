@@ -73,7 +73,7 @@ class FolderCollectionViewCell: UICollectionViewCell {
     func configure(with folder: Folder) {
         imageView.image = UIImage(systemName: "folder.fill")
         imageView.tintColor = UIColor(hex: folder.color!)
-        titleLabel.text = folder.name ?? "Unnamed"
+        titleLabel.text = folder.name!
         dateLabel.text = DateFormatter.dateFormatter.string(from: folder.creation!)
         let redColor = UIColor(hex: "#FF4040")
         favouriteButton.tintColor = folder.favourite ? redColor : .lightGray
